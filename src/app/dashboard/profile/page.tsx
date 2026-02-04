@@ -99,7 +99,7 @@ export default function ProfilePage() {
                 </div>
             </header>
 
-            <div className="container max-w-2xl">
+            <div className="container mx-auto max-w-2xl">
                 <div className="bg-card border rounded-lg shadow-sm p-6 space-y-6">
                     <div className="flex items-center gap-4 border-b pb-6">
                         <div className="h-20 w-20 rounded-full bg-primary/10 flex items-center justify-center text-primary">

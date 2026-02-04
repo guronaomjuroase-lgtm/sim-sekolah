@@ -44,7 +44,7 @@ export default async function DashboardPage() {
 
     return (
         <div className="min-h-screen bg-muted/20">
-            <header className="bg-background border-b px-6 py-4 flex items-center justify-between">
+            <header className="container mx-auto py-12 bg-background border-b px-6 py-4 flex items-center justify-between">
                 <h1 className="text-xl font-bold">Dashboard</h1>
                 <div className="flex items-center gap-4">
                     <span className="text-sm text-muted-foreground">Halo, {user.email}</span>

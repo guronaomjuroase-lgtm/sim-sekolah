@@ -68,7 +68,7 @@ export default function Home() {
 
       {/* Recent Articles Section */}
       <section className="w-full py-24 bg-white/50 backdrop-blur-sm border-t border-dashed">
-        <div className="container">
+        <div className="container mx-auto py-12 px-4">
           <div className="flex justify-between items-end mb-12">
             <div>
               <span className="text-primary font-bold uppercase tracking-wider text-sm">Update Terbaru</span>

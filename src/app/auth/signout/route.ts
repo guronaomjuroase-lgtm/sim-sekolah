@@ -3,7 +3,6 @@ import { redirect } from "next/navigation";
 import { type NextRequest } from "next/server";
 
 export async function POST(request: NextRequest) {
-    const requestUrl = new URL(request.url);
     const supabase = await createClient();
 
     await supabase.auth.signOut();

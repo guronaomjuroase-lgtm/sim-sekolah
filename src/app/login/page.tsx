@@ -31,8 +31,12 @@ export default function LoginPage() {
 
             router.push("/dashboard");
             router.refresh();
-        } catch (err: any) {
-            setError(err.message || "Gagal login");
+        } catch (err: unknown) {
+            let errorMessage = "Gagal login";
+            if (err instanceof Error) {
+                errorMessage = err.message;
+            }
+            setError(errorMessage);
         } finally {
             setLoading(false);
         }

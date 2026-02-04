@@ -45,8 +45,8 @@ export default function ProfilePage() {
                 if (data) {
                     setFullName(data.full_name || "");
                 }
-            } catch (error: any) {
-                console.error("Error loading user data!", error.message);
+            } catch (error: unknown) {
+                console.error("Error loading user data!", error);
             } finally {
                 setLoading(false);
             }
@@ -70,8 +70,10 @@ export default function ProfilePage() {
 
             setMessage({ type: 'success', text: "Profil berhasil diperbarui!" });
             router.refresh(); // Refresh server components to show new name in dashboard if used there
-        } catch (error: any) {
-            setMessage({ type: 'error', text: "Gagal memperbarui profil: " + error.message });
+        } catch (error: unknown) {
+            let msg = "Gagal memperbarui profil";
+            if (error instanceof Error) msg += ": " + error.message;
+            setMessage({ type: 'error', text: msg });
         } finally {
             setUpdating(false);
         }

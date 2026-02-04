@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"; // wait, I don't have ui/card yet. Use standard div or create component.
 
 // I'll stick to standard tailwind classes for now to avoid dependency on shadcn components I haven't installed.
 // Or I can quickly create a card component. I'll use raw tailwind.

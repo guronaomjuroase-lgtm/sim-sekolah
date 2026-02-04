@@ -18,7 +18,7 @@ export default function SchoolProfile() {
                                 Visi
                             </h2>
                             <p className="text-muted-foreground italic">
-                                "Menjadi lembaga pendidikan unggul yang mencetak generasi berkarakter, cerdas, dan kompetitif di era global."
+                                &quot;Menjadi lembaga pendidikan unggul yang mencetak generasi berkarakter, cerdas, dan kompetitif di era global.&quot;
                             </p>
                         </div>
                         <div>

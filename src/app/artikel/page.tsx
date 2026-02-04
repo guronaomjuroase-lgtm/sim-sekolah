@@ -32,7 +32,7 @@ export default function ArticlesPage() {
     ];
 
     return (
-        <div className="container py-12">
+        <div className="container mx-auto py-12">
             <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
                 <h1 className="text-3xl font-bold">Artikel & Berita</h1>
                 <div className="relative max-w-sm w-full">

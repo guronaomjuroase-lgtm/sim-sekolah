@@ -10,6 +10,13 @@ VALUES (
     'https://ui-avatars.com/api/?name=SMKT&background=random'
 );
 
+-- Ensure we have a profile to link to (Safe insert based on existing auth user)
+INSERT INTO public.profiles (id, email, full_name, role)
+SELECT id, email, 'System Admin', 'admin'
+FROM auth.users
+ORDER BY created_at DESC LIMIT 1
+ON CONFLICT (id) DO NOTHING;
+
 -- Seed Articles
 INSERT INTO public.articles (title, slug, excerpt, content, image_url, is_published, published_at, author_id)
 VALUES
@@ -21,7 +28,7 @@ VALUES
     null,
     true,
     NOW() - INTERVAL '2 days',
-    (SELECT id FROM auth.users LIMIT 1) -- Assumes at least one user exists, else will fail. Use with caution or insert dummy user first.
+    (SELECT id FROM auth.users ORDER BY created_at DESC LIMIT 1) 
 ),
 (
     'Pemeriksaan Kesehatan Gratis untuk Warga Sekitar',
